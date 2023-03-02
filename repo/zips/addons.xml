@@ -38,7 +38,7 @@ Changelog 0.0.6:
 - Initial release
     </news>
   </extension>
-</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.3.37">
+</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.3.38">
   <requires>
     
     <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -63,9 +63,8 @@ Changelog 0.0.6:
       <fanart>fanart.jpg</fanart>
     </assets>
     <news>
-Changelog 0.3.37 [20230301]:
-- Added New Setting "Disable Scraping Screen Fanart" 
-- Added New Setting "Disable Scraping Screen Clearlogo"
+Changelog 0.3.38 [20230301]:
+- Disable Nyaa properly based on settings
     </news>
   </extension>
 </addon><addon id="repository.otaku" name="Otaku's Repository" version="1.0" provider-name="Goldenfreddy0703">
