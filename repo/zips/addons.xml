@@ -46,7 +46,7 @@ Changelog 0.0.9:
 - Initial release
     </news>
   </extension>
-</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.3.67">
+</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.3.68">
   <requires>
     
     <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -72,8 +72,9 @@ Changelog 0.0.9:
       <fanart>fanart.jpg</fanart>
     </assets>
     <news>
-Changelog 0.3.67 [20230420]:
-- Fix regression error from last commit disabling subs on zoro streams
+Changelog 0.3.68 [20230427]:
+- Handled Consumet error
+- Added New Context menu "mark as completed"
     </news>
   </extension>
 </addon><addon id="repository.otaku" name="Otaku's Repository" version="1.0" provider-name="Goldenfreddy0703">
