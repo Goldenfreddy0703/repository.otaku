@@ -50,7 +50,7 @@ Changelog 0.0.10:
 - Initial release
     </news>
   </extension>
-</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.3.85">
+</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.3.86">
   <requires>
     
     <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -77,10 +77,8 @@ Changelog 0.0.10:
       <fanart>fanart.jpg</fanart>
     </assets>
     <news>
-Changelog 0.3.85 [20230630]:
-- Fix Animix Scraper
-- Fix Gogo Scraper
-- linting Changes
+Changelog 0.3.86 [20230701]:
+- Fix 9anime scraper using anify
     </news>
   </extension>
 </addon><addon id="repository.otaku" name="Otaku's Repository" version="1.0" provider-name="Goldenfreddy0703">
