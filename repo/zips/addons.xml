@@ -50,7 +50,7 @@ Changelog 0.0.10:
 - Initial release
     </news>
   </extension>
-</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.4.0">
+</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.4.1">
   <requires>
     
     <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -78,8 +78,10 @@ Changelog 0.0.10:
       <fanart>fanart.jpg</fanart>
     </assets>
     <news>
-Changelog 0.4.0 [20230803]:
-- Added Four New Icon Packs
+Changelog 0.4.1 [20230804]:
+- Separated Providers
+- Fixed Season Guessing
+- Fixed Animetosho Searching
     </news>
   </extension>
 </addon><addon id="repository.otaku" name="Otaku's Repository" version="1.0" provider-name="Goldenfreddy0703">
