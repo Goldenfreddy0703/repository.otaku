@@ -83,54 +83,6 @@ Changelog 0.0.10:
       <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
-</addon><addon id="repository.otaku" name="Otaku's Repository" version="1.0" provider-name="Goldenfreddy0703">
-    <extension point="xbmc.addon.repository" name="Otaku's Repository">
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/Goldenfreddy0703/repository.otaku/master/repo/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/Goldenfreddy0703/repository.otaku/master/repo/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/Goldenfreddy0703/repository.otaku/master/repo/zips/</datadir>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Otaku's Repository</summary>
-        <description>A repository for Otaku</description>
-        <disclaimer />
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-</addon><addon id="resource.images.otakuv2icons.coloured" name="Otaku Icons V2- Coloured" version="0.0.2" provider-name="Goldenfreddy0703">
-	<extension point="kodi.resource.images" compile="true" type="otakuv2icons" />
-	<requires>
-		<import addon="kodi.resource" version="1.0.0" />
-	</requires>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Otaku Icons</summary>
-		<description lang="en">Icons for Otaku</description>
-		<platform>all</platform>
-		<license>CC-BY-SA-3.0</license>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-	</extension>
-</addon><addon id="resource.images.otakuv2icons.white" name="Otaku Icons V2- White" version="0.0.2" provider-name="Goldenfreddy0703">
-	<extension point="kodi.resource.images" compile="true" type="otakuv2icons" />
-	<requires>
-		<import addon="kodi.resource" version="1.0.0" />
-	</requires>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Otaku Icons</summary>
-		<description lang="en">Icons for Otaku</description>
-		<platform>all</platform>
-		<license>CC-BY-SA-3.0</license>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-	</extension>
 </addon><addon id="script.otaku.mappings" version="24.01.0" name="Otaku Mappings" provider-name="TeamOtaku">
     <extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
