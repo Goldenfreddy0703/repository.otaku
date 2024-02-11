@@ -1,0 +1,7 @@
+Important: Search Paths have changed. 
+
+Hey everyone, we recently recoded the search functionality and gave you guys the option to remove a search from your history using the context menu. 
+
+For People who are using Otaku Search Paths for there skin. Please use the update paths in the github pinned issues link.
+
+Sorry for the inconvenience, Thank you 
