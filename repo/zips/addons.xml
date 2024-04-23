@@ -58,7 +58,7 @@ Changelog 0.0.10:
 - Initial release
     </news>
   </extension>
-</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.4.100">
+</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.4.101">
   <requires>
     
     <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -84,6 +84,12 @@ Changelog 0.0.10:
     <assets>
       <icon>icon.png</icon>
       <fanart>fanart.jpg</fanart>
+      <clearlogo>logo.png</clearlogo>
+      <poster>poster.png</poster>
+      <screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+      <screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
     </assets>
   </extension>
 </addon><addon id="script.otaku.mappings" version="24.04.11" name="Otaku Mappings" provider-name="TeamOtaku">
