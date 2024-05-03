@@ -107,7 +107,7 @@
             <width>100%</width>
             <!-- Information -->
             <control type="label">
-                <top>-300</top>
+                <top>50</top>
                 <left>-760</left>
                 <width>1920</width>
                 <font>font12</font>
@@ -119,7 +119,7 @@
             </control>
 
             <control type="label">
-                <top>-220</top>
+                <top>100</top>
                 <left>-760</left>
                 <width>1920</width>
                 <font>font12</font>
@@ -131,7 +131,7 @@
             </control>
 
             <control type="label">
-                <top>-140</top>
+                <top>150</top>
                 <left>-760</left>
                 <width>1920</width>
                 <font>font12</font>

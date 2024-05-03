@@ -1247,6 +1247,10 @@ msgctxt "#40568"
 msgid "Scrape Torrents Consistently"
 msgstr "Raspar Torrents de Forma Consistente"
 
+msgctxt "#40569"
+msgid "Arctic Zephyr - Reloaded"
+msgstr "Arctic Zephyr - Reloaded"
+
 ######MAIN Category DIRECTORY#######
 msgctxt "#50000"
 msgid "Airing Anime Calendar"

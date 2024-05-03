@@ -1,3 +1,7 @@
+Changelog 0.4.105[20240502]:
+- Added compatibility to Arctic Zephyr
+- Removed unwanted xml files
+
 Changelog 0.4.104[20240428]:
 - Reverted Scrapping Improvements
 

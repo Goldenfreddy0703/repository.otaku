@@ -36,7 +36,7 @@
             <!--<colordiffuse>8936353b</colordiffuse>-->
         <!--</control>-->
 
-        <!-- otaku Logo -->
+        <!-- Otaku Logo -->
         <control type="image" id="1001">
             <top>-990</top>
             <left>913</left>

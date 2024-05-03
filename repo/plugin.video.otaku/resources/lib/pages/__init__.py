@@ -12,8 +12,12 @@ class CancelProcess(Exception):
 
 
 def getSourcesHelper(actionArgs):
-    sources_window = Sources(*('get_sources.xml', control.ADDON_PATH),
-                             actionArgs=actionArgs)
+    if control.getSetting('general.dialog') == '4':
+        sources_window = Sources(*('get_sources_az.xml', control.ADDON_PATH),
+                                 actionArgs=actionArgs)
+    else:
+        sources_window = Sources(*('get_sources.xml', control.ADDON_PATH),
+                                 actionArgs=actionArgs)
 
     sources = sources_window.doModal()
     try:

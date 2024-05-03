@@ -161,7 +161,10 @@ class SourceSelect(BaseWindow):
             selected_source['name'] = selected_source['release_title']
             database.addTorrentList(self.anilist_id, [selected_source], 2)
 
-        resolver = Resolver(*('resolver.xml', control.ADDON_PATH), actionArgs=self.actionArgs, source_select=True)
+        if control.getSetting('general.dialog') == '4':
+            resolver = Resolver(*('resolver_az.xml', control.ADDON_PATH), actionArgs=self.actionArgs, source_select=True)
+        else:
+            resolver = Resolver(*('resolver.xml', control.ADDON_PATH), actionArgs=self.actionArgs, source_select=True)
 
         self.stream_link = resolver.doModal(sources, {}, False)
 

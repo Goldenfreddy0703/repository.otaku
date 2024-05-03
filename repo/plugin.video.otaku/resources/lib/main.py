@@ -2293,11 +2293,17 @@ def PLAY(payload, params):
 
     if control.getSetting('general.playstyle.episode') == '1' or source_select or rescrape:
         from resources.lib.windows.source_select import SourceSelect
-        link = SourceSelect(*('source_select.xml', control.ADDON_PATH), actionArgs=_mock_args, sources=sources, rescrape=rescrape).doModal()
+        if control.getSetting('general.dialog') == '4':
+            link = SourceSelect(*('source_select_az.xml', control.ADDON_PATH), actionArgs=_mock_args, sources=sources, rescrape=rescrape).doModal()
+        else:
+            link = SourceSelect(*('source_select.xml', control.ADDON_PATH), actionArgs=_mock_args, sources=sources, rescrape=rescrape).doModal()
 
     else:
         from resources.lib.windows.resolver import Resolver
-        resolver = Resolver(*('resolver.xml', control.ADDON_PATH), actionArgs=_mock_args)
+        if control.getSetting('general.dialog') == '4':
+            resolver = Resolver(*('resolver_az.xml', control.ADDON_PATH), actionArgs=_mock_args)
+        else:
+            resolver = Resolver(*('resolver.xml', control.ADDON_PATH), actionArgs=_mock_args)
         link = resolver.doModal(sources, {}, False)
     player.play_source(link, anilist_id, watchlist_update_episode, _BROWSER.get_episodeList, int(episode),
                        source_select=source_select, rescrape=rescrape)
@@ -2320,11 +2326,17 @@ def PLAY_MOVIE(payload, params):
 
     if control.getSetting('general.playstyle.movie') == '1' or source_select or rescrape:
         from resources.lib.windows.source_select import SourceSelect
-        link = SourceSelect(*('source_select.xml', control.ADDON_PATH), actionArgs=_mock_args, sources=sources, rescrape=rescrape).doModal()
+        if control.getSetting('general.dialog') == '4':
+            link = SourceSelect(*('source_select_az.xml', control.ADDON_PATH), actionArgs=_mock_args, sources=sources, rescrape=rescrape).doModal()
+        else:
+            link = SourceSelect(*('source_select.xml', control.ADDON_PATH), actionArgs=_mock_args, sources=sources, rescrape=rescrape).doModal()
 
     else:
         from resources.lib.windows.resolver import Resolver
-        resolver = Resolver(*('resolver.xml', control.ADDON_PATH), actionArgs=_mock_args)
+        if control.getSetting('general.dialog') == '4':
+            resolver = Resolver(*('resolver_az.xml', control.ADDON_PATH), actionArgs=_mock_args)
+        else:
+            resolver = Resolver(*('resolver.xml', control.ADDON_PATH), actionArgs=_mock_args)
         link = resolver.doModal(sources, {}, False)
     player.play_source(link, anilist_id, watchlist_update_episode, _BROWSER.get_episodeList, 1, source_select=source_select, rescrape=rescrape)
 
@@ -2345,7 +2357,10 @@ def DOWNLOAD(payload, params):
         _mock_args = {"anilist_id": anilist_id, "episode": episode}
 
     from resources.lib.windows.source_select import SourceSelect
-    link = SourceSelect(*('source_select.xml', control.ADDON_PATH), actionArgs=_mock_args, sources=sources).doModal()
+    if control.getSetting('general.dialog') == '4':
+        link = SourceSelect(*('source_select_az.xml', control.ADDON_PATH), actionArgs=_mock_args, sources=sources).doModal()
+    else:
+        link = SourceSelect(*('source_select.xml', control.ADDON_PATH), actionArgs=_mock_args, sources=sources).doModal()
     from resources.lib.ui import download_manager
 
     if not link:
