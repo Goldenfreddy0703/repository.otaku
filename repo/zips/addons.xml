@@ -61,7 +61,7 @@
       <poster>poster.png</poster>
     </assets>
   </extension>
-</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.5.28">
+</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.5.29">
   <requires>
     
     <import addon="script.module.beautifulsoup4" version="4.5.3" />
@@ -97,7 +97,7 @@
       <screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
     </assets>
   </extension>
-</addon><addon id="script.otaku.mappings" version="24.10.04" name="Otaku Mappings" provider-name="TeamOtaku">
+</addon><addon id="script.otaku.mappings" version="24.10.09" name="Otaku Mappings" provider-name="TeamOtaku">
     <extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
         <summary>Anime ID Mappings for Otaku Addon</summary>
