@@ -61,7 +61,7 @@
       <poster>poster.png</poster>
     </assets>
   </extension>
-</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.5.37">
+</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.5.38">
   <requires>
     
     <import addon="script.module.beautifulsoup4" version="4.5.3" />
