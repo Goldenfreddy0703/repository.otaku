@@ -153,7 +153,7 @@ v0.5.9 (2022-03-22)
       <icon>resources/icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="script.otaku.mappings" version="25.01.05" name="Otaku Mappings" provider-name="TeamOtaku">
+</addon><addon id="script.otaku.mappings" version="25.02.01" name="Otaku Mappings" provider-name="TeamOtaku">
     <extension point="xbmc.python.module" library="lib" />
 	<extension point="xbmc.addon.metadata">
         <summary>Anime ID Mappings for Otaku Addon</summary>
