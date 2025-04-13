@@ -163,7 +163,7 @@ class sources(BrowserBase):
                                         subs = {}
                                     headers.update({'Origin': self._BASE_URL[:-1]})
                                     res = self._get_request(srclink, headers=headers)
-                                    quals = re.findall(r'#EXT.+?RESOLUTION=\d+x(\d+).+\n(?!#)(.+)', res)
+                                    quals = re.findall(r'#EXT.+?RESOLUTION=\d+x(\d+).*\n(?!#)(.+)', res)
                                     for qual, qlink in quals:
                                         qual = int(qual)
                                         if qual < 577:
@@ -233,10 +233,6 @@ class sources(BrowserBase):
         data = control.arc4(six.b(key), base64.urlsafe_b64decode(six.b(text)))
         data = urllib_parse.unquote(data)
         return data
-
-    @staticmethod
-    def clean_title(text):
-        return re.sub(r'\W', '', text).lower()
 
     def __extract_aniwave(self, url):
         page_content = self._get_request(url, headers={'Referer': self._BASE_URL})
