@@ -1,45 +1,49 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="context.otaku" version="0.0.15" name="Otaku - Global Context Menu Items" provider-name="TeamOtaku">
+<addons><addon id="context.otaku" version="1.0.29" name="Otaku - Global Context Menu Items" provider-name="TeamOtaku">
   <requires>
-    
+     <import addon="xbmc.python" version="3.0.1" />
   </requires>
   <extension point="kodi.context.item">
     <menu id="kodi.core.main">
       <item library="default.py" args="findrecommendations">
         <label>Find Recommendations</label>
-        <visible>String.IsEqual(Window(home).Property(context.otaku.findrecommendations),true)+String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/)+[String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
+        <visible>String.IsEqual(Window(home).Property(context.otaku.findrecommendations),true) + String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/) + [String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
       </item>
       <item library="default.py" args="findrelations">
         <label>Find Relations</label>
-        <visible>String.IsEqual(Window(home).Property(context.otaku.findrelations),true)+String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/)+[String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
+        <visible>String.IsEqual(Window(home).Property(context.otaku.findrelations),true) + String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/) + [String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
       </item>
       <item library="default.py" args="getwatchorder">
         <label>Get Watch Order</label>
-        <visible>String.IsEqual(Window(home).Property(context.otaku.getwatchorder),true)+String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/)+[String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
+        <visible>String.IsEqual(Window(home).Property(context.otaku.getwatchorder),true) + String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/) + [String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
       </item>
       <item library="default.py" args="markedaswatched">
         <label>Marked as Watched [COLOR blue]WatchList[/COLOR]</label>
-        <visible>String.IsEqual(Window(home).Property(context.otaku.markedaswatched),true)+String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/)+[String.IsEqual(ListItem.DBTYPE,episode)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
+        <visible>String.IsEqual(Window(home).Property(context.otaku.markedaswatched),true) + String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/) + [String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,movie)] + !Player.HasMedia</visible>
       </item>
       <item library="default.py" args="rescrape">
         <label>Rescrape</label>
-        <visible>String.IsEqual(Window(home).Property(context.otaku.rescrape),true)+String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/)+[String.IsEqual(ListItem.DBTYPE,episode)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
+        <visible>String.IsEqual(Window(home).Property(context.otaku.rescrape),true) + String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/) + [String.IsEqual(ListItem.DBTYPE,episode)|String.IsEqual(ListItem.DBTYPE,movie)] + !Player.HasMedia</visible>
       </item>
       <item library="default.py" args="sourceselect">
         <label>Source Select</label>
-        <visible>String.IsEqual(Window(home).Property(context.otaku.sourceselect),true)+String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/)+[String.IsEqual(ListItem.DBTYPE,episode)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
+        <visible>String.IsEqual(Window(home).Property(context.otaku.sourceselect),true) + String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/) + [String.IsEqual(ListItem.DBTYPE,episode)|String.IsEqual(ListItem.DBTYPE,movie)] + !Player.HasMedia</visible>
       </item>
       <item library="default.py" args="logout">
         <label>Logout</label>
-        <visible>String.IsEqual(Window(home).Property(context.otaku.logout),true)+String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/)+String.Contains(ListItem.folderpath,/watchlist/)</visible>
-      </item>
-      <item library="default.py" args="watchlist">
-        <label>WatchList Manager</label>
-        <visible>String.IsEqual(Window(home).Property(context.otaku.watchlist),true)+String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/)+[String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
+        <visible>String.IsEqual(Window(home).Property(context.otaku.logout),true) + String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/) + String.Contains(ListItem.folderpath,/watchlist/)</visible>
       </item>
       <item library="default.py" args="deletefromdatabase">
         <label>Delete From Database</label>
-        <visible>String.IsEqual(Window(home).Property(context.otaku.deletefromdatabase),true)+String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/)+[String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
+        <visible>String.IsEqual(Window(home).Property(context.otaku.deletefromdatabase),true) + String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/) + [String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
+      </item>
+      <item library="default.py" args="watchlist">
+        <label>WatchList Manager</label>
+        <visible>String.IsEqual(Window(home).Property(context.otaku.watchlist),true) + String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/) + [String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
+      </item>
+      <item library="default.py" args="fanartselect">
+        <label>Select Fanart</label>
+        <visible>String.IsEqual(Window(home).Property(context.otaku.fanartselect),true) + String.StartsWith(ListItem.Path,plugin://plugin.video.otaku/)+[String.IsEqual(ListItem.DBTYPE,tvshow)|String.IsEqual(ListItem.DBTYPE,movie)]</visible>
       </item>
     </menu>
   </extension>
@@ -61,19 +65,12 @@
       <poster>poster.png</poster>
     </assets>
   </extension>
-</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="0.5.43">
+</addon><addon id="plugin.video.otaku" name="Otaku" provider-name="TeamOtaku" version="5.2.45">
   <requires>
-    
-    <import addon="script.module.beautifulsoup4" version="4.5.3" />
-    <import addon="script.module.dateutil" version="2.6.1" />
-    <import addon="script.module.inputstreamhelper" version="0.3.3" />
-    <import addon="script.module.six" version="1.15.0" />
-    <import addon="script.module.kodi-six" version="0.1.3" />
-    <import addon="context.otaku" version="0.0.15" />
-    <import addon="script.otaku.themepak" version="0.0.11" />
-    <import addon="script.otaku.mappings" />
-    
-    
+    <import addon="xbmc.python" version="3.0.1" />
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.inputstreamhelper" />
+    <import addon="context.otaku" version="1.0.27" />
   </requires>
   <extension library="default.py" point="xbmc.python.pluginsource">
         <provides>video</provides>
@@ -82,7 +79,10 @@
   <extension point="xbmc.addon.metadata">
     <reuselanguageinvoker>false</reuselanguageinvoker> 
     <summary lang="en">Otaku video plugin</summary>
-    <description lang="en">HD Animes</description>
+    <description lang="en">Otaku is a provider based, streaming software that is tightly
+            interwoven with Mal. Otaku provides the freedom to view media from a single menu system from service
+            providers of the users choosing. Please Note: We do not host, create, or distribute any of the content displayed in the addon.
+    </description>
     <platform>all</platform>
     <disclaimer>Otaku is and always will be free and open-source. None of its code and resources may be sold or redistributed for any commercial purposes.[CR]This addon and its developers [B]DO NOT[/B] host, create, or distribute any of the content displayed in the addon, it simply scrapes ad financed public websites. It is the responsibility of the user to ensure that they are following all applicable laws and regulations in their country.[CR]This addon and its developers are not in any way affiliated with Team Kodi or any of the sites and providers used in the addon.</disclaimer>
     <license>GPL-3.0</license>
@@ -97,91 +97,22 @@
       <screenshot>resources/screenshots/screenshot-04.jpg</screenshot>
     </assets>
   </extension>
-</addon><addon id="script.module.inputstreamhelper" name="InputStream Helper" version="0.6.1" provider-name="emilsvennesson, dagwieers, mediaminister, horstle">
-  <requires>
-    
-    <import addon="xbmc.python" version="2.25.0" />
-    <import addon="script.module.pysocks" version="1.6.8" optional="true" />
-  </requires>
-  
-  <extension point="xbmc.python.script" library="default.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">Kodi InputStream und DRM Wiedergabe einfach gemacht</summary>
-    <summary lang="el_GR">Βοηθός Inputstream για το Kodi και εύκολη αναπαραγωγή DRM</summary>
-    <summary lang="en_GB">Kodi InputStream and DRM playback made easy</summary>
-    <summary lang="es_ES">Kodi InputStream y reproducción DRM echa fácil</summary>
-    <summary lang="fr_FR">La lecture Kodi InputStream et DRM en toute simplicité</summary>
-    <summary lang="hr_HR">Kodi InputStream olakšava reprodukciju DRM zaštićenog sadržaja</summary>
-    <description lang="de_DE">Dieses einfache Kodi-Modul macht das Leben für Addon Entwickler einfacher, die auf InputStream basierte Addons und DRM Wiedergabe angewiesen sind.</description>
-    <description lang="el_GR">Μία απλή μονάδα για το Kodi η οποία διευκολύνει την ζωή των προγραμματιστών οι οποίοι εξαρτώνται από τα πρόσθετσ InputStream και αναπαραγωγή τύπου DRM.</description>
-    <description lang="en_GB">A simple Kodi module that makes life easier for add-on developers relying on InputStream based add-ons and DRM playback.</description>
-    <description lang="es_ES">Un módulo Kodi simple que hace la vida más fácil para los desarrolladores de complementos que dependen de complementos basados en InputStream y reproducción de DRM.</description>
-    <description lang="fr_FR">Un simple module Kodi qui simplifie la vie des développeurs de modules complémentaires en s’appuyant sur des modules complémentaires basés sur InputStream et sur la lecture de DRM.</description>
-    <description lang="hr_HR">Jednostavan Kodi modul koji olakšava razvijanje dodataka koji se temelje na InputStream dodatku i reprodukciji DRM zaštićenog sadržaja.</description>
-    <description lang="ru_RU">Простой модуль для Kodi, который облегчает жизнь разработчикам дополнений, с использованием InputStream дополнений и воспроизведения DRM контента.</description>
-    <news>
-v0.6.1 (2023-05-30)
-- Performance improvements on Linux ARM
-- This will be the last release for Python 2 i.e. Kodi 18 (Leia) and below. The next release will require Python 3 and Kodi 19 (Matrix) or higher.
-
-v0.6.0 (2023-05-03)
-- Initial support for AARCH64 Linux
-- Initial support for AARCH64 Macs
-- New option to install a specific version on most platforms
-
-v0.5.10 (2022-04-18)
-- Fix automatic submission of release
-- Update German translation
-- Fix update_frequency setting
-- Fix install_from
-- Improve/Fix Widevine extraction from Chrome OS images
-
-v0.5.9 (2022-03-22)
-- Update Croatian translation
-- Replace deprecated LooseVersion
-- Fix http_get decode error
-- Option to install Widevine from specified source
-    </news>
-    <platform>all</platform>
-    <license>MIT</license>
-    <website>https://github.com/emilsvennesson/script.module.inputstreamhelper/wiki</website>
-    <source>https://github.com/emilsvennesson/script.module.inputstreamhelper</source>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-  </extension>
-</addon><addon id="script.otaku.mappings" version="25.04.09" name="Otaku Mappings" provider-name="TeamOtaku">
-    <extension point="xbmc.python.module" library="lib" />
-	<extension point="xbmc.addon.metadata">
-        <summary>Anime ID Mappings for Otaku Addon</summary>
-        <description>Mappings for Otaku are maintained separately to make distribution of the the addon itself easier/faster.</description>
-        <platform>all</platform>
-        <license>GPL-2.0</license>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <clearlogo>logo.png</clearlogo>
-            <poster>poster.png</poster>
-        </assets>
+</addon><addon id="repository.otaku" name="Otaku's Repository" version="1.0" provider-name="Goldenfreddy0703">
+    <extension point="xbmc.addon.repository" name="Otaku's Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/Goldenfreddy0703/repository.otaku/master/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Goldenfreddy0703/repository.otaku/master/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/Goldenfreddy0703/repository.otaku/master/repo/zips/</datadir>
+        </dir>
     </extension>
-</addon><addon id="script.otaku.themepak" version="0.0.13" name="Otaku Themepak" provider-name="TeamOtaku">
-    <requires>
-        <import addon="kodi.resource" version="1.0.0" />
-    </requires>
-    <extension point="kodi.resource.images" compile="false" type="themepak" />
     <extension point="xbmc.addon.metadata">
-        <summary>Themes for the Otaku Addon</summary>
-        <description>Themes for Otaku are maintained separately to make distribution of the the addon itself easier/faster.</description>
+        <summary>Otaku's Repository</summary>
+        <description>A repository for Otaku</description>
+        <disclaimer />
         <platform>all</platform>
-        <license>GPL-2.0</license>
         <assets>
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
-            <clearlogo>logo.png</clearlogo>
-            <poster>poster.png</poster>
         </assets>
     </extension>
 </addon></addons>
