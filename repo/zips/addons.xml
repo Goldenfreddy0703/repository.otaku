@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="context.otaku" version="1.0.30" name="Otaku - Global Context Menu Items" provider-name="TeamOtaku">
+<addons><addon id="context.otaku" version="1.0.31" name="Otaku - Global Context Menu Items" provider-name="TeamOtaku">
   <requires>
      <import addon="xbmc.python" version="3.0.1" />
   </requires>
